@@ -2,5 +2,6 @@
   ansible.builtin.include_tasks:
     file: create-job.yml
   loop:
-    - {jobName: 'test-1'}
+    - {jobName: 'test-1', jobDescription: 'Test Job 1', repo_name: 'learn-jenkins'}
+
 
