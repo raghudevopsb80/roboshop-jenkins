@@ -2,5 +2,8 @@
   hosts: localhost
   roles:
     - jenkins-jobs
-
+  vars:
+    jobs:
+      - {jobName: 'test-1', jobDescription: 'Test Job 1', repo_name: 'learn-jenkins'}
+      
 
