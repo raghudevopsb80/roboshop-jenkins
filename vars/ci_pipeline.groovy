@@ -17,7 +17,7 @@ def call() {
       }
     }
     else {
-      stage('Compile') {
+      stage('Compile Code') {
         print 'Compile'
       }
 
