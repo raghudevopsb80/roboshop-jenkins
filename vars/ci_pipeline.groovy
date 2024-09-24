@@ -18,7 +18,12 @@ def call() {
     }
     else {
       stage('Compile Code') {
-        print 'Compile'
+        if (appType == "maven") {
+          sh 'mvn compile'
+        }
+        else {
+          print 'Compile Not required'
+        }
       }
 
       if(BRANCH_NAME != "main") {
