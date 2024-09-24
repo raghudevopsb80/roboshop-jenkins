@@ -1,7 +1,7 @@
 def call() {
   node() {
 
-    sh 'env'
+//    sh 'env'
 
     if (env.TAG_NAME) {
       stage('Docker Build') {
