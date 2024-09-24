@@ -30,7 +30,7 @@ def call() {
 
     if (env.TAG_NAME) {
       stage('Docker Build') {
-        print 'Docker Build'
+        sh 'docker build .'
       }
 
       stage('Docker Push') {
