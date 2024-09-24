@@ -3,6 +3,31 @@ def call() {
 
 //    sh 'env'
 
+    stage('Code Checkout') {
+
+      sh 'find . | grep "^./" |xargs rm -rf'
+
+      if (env.TAG_NAME ==~ ".*") {
+        env.gitbrname = "refs/tags/${env.TAG_NAME}"
+      } else {
+        env.gitbrname = "${env.BRANCH_NAME}"
+      }
+      checkout poll: false, scm: [
+          $class: 'GitSCM',
+          userRemoteConfigs: [
+              [
+                  url: "https://github.com/raghudevopsb80/${env.appName}"
+              ]
+          ],
+          branches: [
+              [
+                  name: gitbrname
+              ]
+          ]
+      ]
+
+    }
+
     if (env.TAG_NAME) {
       stage('Docker Build') {
         print 'Docker Build'
