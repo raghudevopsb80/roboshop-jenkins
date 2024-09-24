@@ -29,7 +29,8 @@ def call() {
 //        }
 //      }
 
-      if(BRANCH_NAME != "main") {
+      // Time being we commented this. Later we will enable it back.
+      //if(BRANCH_NAME != "main") {
 
         stage('Unit Test Cases') {
           if (appType == "nodejs") {
@@ -48,7 +49,7 @@ def call() {
 
       }
 
-    }
+    //}
 
   }
 }
