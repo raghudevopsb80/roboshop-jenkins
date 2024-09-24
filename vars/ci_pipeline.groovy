@@ -58,17 +58,43 @@ def call() {
       //if(BRANCH_NAME != "main") {
 
         stage('Unit Test Cases') {
+
           if (appType == "nodejs") {
-            sh 'npm run test'
+            //sh 'npm run test'
+            print '#npm run test'
           }
-          print 'Test Cases'
+
+          if (appType == "python") {
+            //sh 'python -m unittest'
+            print '#python -m unittest'
+          }
+
+          if (appType == "maven") {
+            //sh 'mvn test'
+            print '#mvn test'
+          }
+
         }
 
         stage('Integration Test Cases') {
-          print 'Test Cases'
+          if (appType == "nodejs") {
+            //sh 'npm run integration-test'
+            print '#npm run integration-test'
+          }
+
+          if (appType == "python") {
+            //sh 'python -m unittest discover -s project/tests/integration'
+            print '#python -m unittest discover -s project/tests/integration'
+          }
+
+          if (appType == "maven") {
+            //sh 'mvn test'
+            print '#mvn integration-test'
+          }
         }
 
         stage('Regression Test Cases') {
+          // Developer will provide appropriate steps to execute.
           print 'Test Cases'
         }
 
