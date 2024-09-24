@@ -30,9 +30,22 @@ def call() {
 //      }
 
       if(BRANCH_NAME != "main") {
-        stage('Test Cases') {
+
+        stage('Unit Test Cases') {
+          if (appType == "nodejs") {
+            sh 'npm run test'
+          }
           print 'Test Cases'
         }
+
+        stage('Integration Test Cases') {
+          print 'Test Cases'
+        }
+
+        stage('Regression Test Cases') {
+          print 'Test Cases'
+        }
+
       }
 
     }
