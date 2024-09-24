@@ -17,14 +17,17 @@ def call() {
       }
     }
     else {
-      stage('Compile Code') {
-        if (appType == "maven") {
-          sh 'mvn compile'
-        }
-        else {
-          print 'Compile Not required'
-        }
-      }
+
+      // This stage is particularly not needed now, It would come later, we will enable later.
+
+//      stage('Compile Code') {
+//        if (appType == "maven") {
+//          sh 'mvn compile'
+//        }
+//        else {
+//          print 'Compile Not required'
+//        }
+//      }
 
       if(BRANCH_NAME != "main") {
         stage('Test Cases') {
