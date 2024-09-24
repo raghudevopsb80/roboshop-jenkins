@@ -28,7 +28,7 @@ def call() {
 
     }
 
-    if (env.TAG_NAME) {
+    //if (env.TAG_NAME) {
       stage('Docker Build') {
         sh 'docker build .'
       }
@@ -40,8 +40,8 @@ def call() {
       stage('Deploy to Dev') {
         print 'Deploy to Dev'
       }
-    }
-    else {
+    //}
+    //else {
 
       // This stage is particularly not needed now, It would come later, we will enable later.
 
@@ -98,7 +98,7 @@ def call() {
           print 'Test Cases'
         }
 
-      }
+      //}
 
     //}
 
