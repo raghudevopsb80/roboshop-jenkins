@@ -6,10 +6,10 @@
     jobs:
       - {jobName: 'test-1', jobDescription: 'Test Job 1', repo_name: 'learn-jenkins'}
       - {jobName: 'roboshop-catalogue', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-catalogue'}
-      - {jobName: 'roboshop-user', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-user'}
-      - {jobName: 'roboshop-cart', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-cart'}
-      - {jobName: 'roboshop-payment', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-payment'}
-      - {jobName: 'roboshop-shipping', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-shipping'}
-      - {jobName: 'roboshop-frontend', jobDescription: 'Catalogue MicroService', repo_name: 'roboshop-frontend'}
+      - {jobName: 'roboshop-user', jobDescription: 'User MicroService', repo_name: 'roboshop-user'}
+      - {jobName: 'roboshop-cart', jobDescription: 'Cart MicroService', repo_name: 'roboshop-cart'}
+      - {jobName: 'roboshop-payment', jobDescription: 'Payment MicroService', repo_name: 'roboshop-payment'}
+      - {jobName: 'roboshop-shipping', jobDescription: 'Shipping MicroService', repo_name: 'roboshop-shipping'}
+      - {jobName: 'roboshop-frontend', jobDescription: 'Frontend MicroService', repo_name: 'roboshop-frontend'}
 
 
