@@ -11,6 +11,5 @@ resource "github_repository_webhook" "main" {
 
 provider "github" {
   owner = "raghudevopsb80"
-  base_url = "https://github.com"
 }
 
