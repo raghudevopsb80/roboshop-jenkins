@@ -1,4 +1,4 @@
-resource "github_repository_webhook" "main" {
+resource "github_organization_webhook" "main" {
   repository = "roboshop-cart"
 
   configuration {
@@ -9,7 +9,4 @@ resource "github_repository_webhook" "main" {
   events = ["push"]
 }
 
-provider "github" {
-  owner = "raghudevopsb80"
-}
 
