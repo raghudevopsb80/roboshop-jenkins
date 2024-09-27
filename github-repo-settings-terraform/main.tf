@@ -1,5 +1,5 @@
 resource "github_organization_webhook" "main" {
-#   name = "roboshop-cart"
+   name = "raghudevopsb80/roboshop-cart"
 
   configuration {
     url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=roboshop-cart"
@@ -10,6 +10,6 @@ resource "github_organization_webhook" "main" {
 }
 
 
-provider "github" {
-  organization = "raghudevopsb80"
-}
+# provider "github" {
+#   organization = "raghudevopsb80"
+# }
