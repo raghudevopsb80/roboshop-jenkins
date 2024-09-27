@@ -14,6 +14,15 @@
 # #   organization = "raghudevopsb80"
 # # }
 
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.0"
+    }
+  }
+}
+
 
 resource "github_organization_webhook" "foo" {
   name = "web"
