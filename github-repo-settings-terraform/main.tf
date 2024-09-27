@@ -1,5 +1,5 @@
 resource "github_repository_webhook" "main" {
-    repository = "roboshop-cart"
+    repository = "raghudevopsb80/roboshop-cart"
 
   configuration {
     url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=roboshop-cart"
@@ -21,6 +21,3 @@ terraform {
   }
 }
 
-provider "github" {
-  owner = "raghudevopsb80"
-}
