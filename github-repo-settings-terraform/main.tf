@@ -10,3 +10,6 @@ resource "github_organization_webhook" "main" {
 }
 
 
+provider "github" {
+  organization = "raghudevopsb80"
+}
