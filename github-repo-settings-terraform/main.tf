@@ -9,3 +9,7 @@ resource "github_repository_webhook" "main" {
   events = ["push"]
 }
 
+provider "github" {
+  owner = "raghudevopsb80"
+}
+
