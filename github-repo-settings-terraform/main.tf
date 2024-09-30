@@ -9,8 +9,21 @@
 #   events = ["push"]
 # }
 
-data "github_repository_webhooks" "repo" {
-  repository = "roboshop-cart"
+# data "github_repository_webhooks" "repo" {
+#   repository = "roboshop-cart"
+# }
+
+resource "github_repository" "example" {
+  name        = "raghudevopsb80/test1"
+  description = "My awesome codebase"
+
+  visibility = "public"
+
+  template {
+    owner                = "github"
+    repository           = "terraform-template-module"
+    include_all_branches = true
+  }
 }
 
 
