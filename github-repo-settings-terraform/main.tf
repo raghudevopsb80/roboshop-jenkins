@@ -9,20 +9,10 @@
 #   events = ["push"]
 # }
 
-# data "github_repository_webhooks" "repo" {
-#   repository = "roboshop-cart"
-# }
-
-resource "github_repository_file" "foo" {
-  repository          = "learn-jenkins"
-  branch              = "main"
-  file                = ".gitignore"
-  content             = "**/*.tfstate"
-  commit_message      = "Managed by Terraform"
-  commit_author       = "Terraform User"
-  commit_email        = "terraform@example.com"
-  overwrite_on_create = true
+data "github_repository_webhooks" "repo" {
+  repository = "roboshop-cart"
 }
+
 
 
 provider "github" {
