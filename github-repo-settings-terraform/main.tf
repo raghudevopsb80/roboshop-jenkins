@@ -13,6 +13,9 @@ data "github_repository_webhooks" "repo" {
   repository = "roboshop-cart"
 }
 
+output "test" {
+  value = data.github_repository_webhooks.repo
+}
 
 
 provider "github" {
