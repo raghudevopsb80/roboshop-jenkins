@@ -14,7 +14,7 @@
 # }
 
 resource "github_repository_file" "foo" {
-  repository          = "warp"
+  repository          = "learn-jenkins"
   branch              = "main"
   file                = ".gitignore"
   content             = "**/*.tfstate"
@@ -26,6 +26,7 @@ resource "github_repository_file" "foo" {
 
 
 provider "github" {
+  owner = "raghudevopsb80"
 }
 
 
