@@ -28,7 +28,6 @@ resource "github_repository" "example" {
 
 
 provider "github" {
-  owner = "raghudevopsb80"
 }
 
 
