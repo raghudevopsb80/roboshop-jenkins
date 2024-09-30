@@ -14,7 +14,7 @@
 # }
 
 resource "github_repository" "example" {
-  name        = "raghudevopsb80/test1"
+  name        = "test1"
   description = "My awesome codebase"
 
   visibility = "public"
