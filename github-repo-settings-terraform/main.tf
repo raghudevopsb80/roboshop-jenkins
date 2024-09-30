@@ -20,8 +20,8 @@ resource "github_repository" "example" {
   visibility = "public"
 
   template {
-    owner                = "github"
-    repository           = "terraform-template-module"
+    owner                = "raghudevopsb80"
+    repository           = "learn-jenkins"
     include_all_branches = true
   }
 }
