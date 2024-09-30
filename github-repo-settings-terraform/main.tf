@@ -12,6 +12,7 @@ resource "github_repository_webhook" "main" {
 
 provider "github" {
   owner = "raghudevopsb80"
+  organization = "raghudevopsb80"
 }
 
 
