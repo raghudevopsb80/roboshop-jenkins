@@ -16,7 +16,6 @@ data "github_repository_webhooks" "repo" {
 
 provider "github" {
   owner = "raghudevopsb80"
-  organization = "raghudevopsb80"
 }
 
 
