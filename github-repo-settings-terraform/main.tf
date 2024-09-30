@@ -1,34 +1,12 @@
 resource "github_repository_webhook" "main" {
-    repository = "roboshop-cart"
+  count      = length(var.repos)
+  repository = element(var.repos, count.index)
 
   configuration {
-    url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=roboshop-cart"
+    url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=${element(var.repos, count.index)}"
     content_type = "form"
   }
   active = true
   events = ["push"]
-}
-
-data "github_repository_webhooks" "repo" {
-  repository = "roboshop-cart"
-}
-
-output "test" {
-  value = data.github_repository_webhooks.repo
-}
-
-
-provider "github" {
-  owner = "raghudevopsb80"
-}
-
-
-terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.0"
-    }
-  }
 }
 
