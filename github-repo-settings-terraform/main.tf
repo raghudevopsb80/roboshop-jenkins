@@ -14,7 +14,7 @@
 # }
 
 resource "github_repository_file" "foo" {
-  repository          = "raghudevopsb80/learn-jenkins"
+  repository          = "warp"
   branch              = "main"
   file                = ".gitignore"
   content             = "**/*.tfstate"
