@@ -1,9 +1,9 @@
 resource "github_repository_webhook" "main" {
-  count      = length(var.repos)
-  repository = element(var.repos, count.index)
+  for_each   = var.repos
+  repository = each.key
 
   configuration {
-    url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=${element(var.repos, count.index)}"
+    url          = "http://jenkins.rdevopsb80.online:8080/multibranch-webhook-trigger/invoke?token=${each.key}"
     content_type = "form"
   }
   active = true

@@ -2,6 +2,10 @@ data "github_user" "user" {
   username = "r-devops"
 }
 
+locals {
+  ENV =
+}
+
 resource "github_repository_environment" "env" {
   count               = length(var.ENV)
   environment         = element(var.ENV, count.index)
