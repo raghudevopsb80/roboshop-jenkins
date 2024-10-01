@@ -1,2 +1,2 @@
-variable "repository" {}
+variable "repos" {}
 variable "ENV" {}

@@ -11,9 +11,8 @@ resource "github_repository_webhook" "main" {
 }
 
 module "ENV" {
-  count      = length(var.repos)
   source     = "./ADD-ENV-GITHUB"
   ENV        = ["DEV", "QA", "UAT", "PROD"]
-  repository = element(var.repos, count.index)
+  repos      = var.repos
 }
 
