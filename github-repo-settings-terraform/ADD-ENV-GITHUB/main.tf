@@ -12,3 +12,6 @@ resource "github_repository_environment" "env" {
   }
 }
 
+provider "github" {
+  owner = "raghudevopsb80"
+}
