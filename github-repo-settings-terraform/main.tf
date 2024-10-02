@@ -25,5 +25,5 @@ data "github_user" "user" {
 # }
 
 output "x" {
-  value = local.repo_with_env_list
+  value = local.repo_with_env_list[0]["env"]
 }
