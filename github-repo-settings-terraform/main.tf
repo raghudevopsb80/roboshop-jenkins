@@ -12,7 +12,6 @@ resource "github_repository_webhook" "main" {
 
 module "ENV" {
   source     = "./ADD-ENV-GITHUB"
-  ENV        = ["DEV", "QA", "UAT", "PROD"]
-  repos      = var.repos
+  repos      = local.repo_with_env_list
 }
 
