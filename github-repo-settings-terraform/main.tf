@@ -24,6 +24,3 @@ resource "github_repository_environment" "env" {
   }
 }
 
-output "x" {
-  value = local.repo_with_env_list[0]["env"]
-}
