@@ -39,7 +39,7 @@ def call() {
       }
 
       stage('Deploy to Dev') {
-        print 'Deploy to Dev'
+        sh 'gh workflow run deploy.yaml'
       }
     }
     else {
