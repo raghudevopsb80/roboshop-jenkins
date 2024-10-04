@@ -39,7 +39,7 @@ def call() {
       }
 
       stage('Deploy to Dev') {
-        sh 'gh workflow run deploy.yaml -f appVersion=${TAG_NAME}'
+        sh 'gh workflow run deploy.yaml -f appVersion=${TAG_NAME} -f appName=${appName}'
       }
     }
     else {
